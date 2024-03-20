@@ -1,0 +1,230 @@
+* {
+    z-index: 0;
+    font-family: Poppins;
+    box-sizing: border-box;
+}
+*::selection {
+    color: black;
+    background-color: wheat;
+}
+body {
+    background: url('/media/bgImg2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* HEADER */
+.navbarMobile {
+    display: none;
+}
+.navbar {
+    z-index: 1;
+    padding: 0 40px;
+    height: 80px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    font-size: 30px;
+    color: wheat;
+    background-color: #da7b9300;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0));
+}
+#title {
+    font-size: 50px;
+    font-weight: 200;
+}
+.navbarItems {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbarItems a{
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+.navbarItems a:hover {
+    background: rgb(0, 255, 255);
+    color: black;
+}
+.hamburgMenu {
+    display: none;
+}
+
+
+/* MAIN */
+/* about me */
+.aboutmeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(24, 24, 24);
+    background: linear-gradient(rgba(0,0,0),rgba(10,10,10),rgba(10,10,10),rgba(10,10,10),rgba(0,0,0));
+}
+.aboutMe {
+    height: fit-content;
+    width: 95%;
+    margin: 110px 0 0 0;
+    padding: 40px;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.0);
+    transition: all 0.4s ease-in-out;
+}
+#myImg {
+    height: 100%;
+    border: 3px solid rgba(255, 255, 255, 0.459);
+}
+.aboutmeTxt {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+}
+#myRole {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 70px;
+    background-image: linear-gradient(45deg, wheat, cyan);
+    background-clip: text;
+    color: transparent;
+}
+#myRole b {
+    font-weight: 600;
+    font-size: 70px;
+}
+#myDesc {
+    font-size: 22px;
+    font-weight: 200;
+    color: white;
+}
+#downloadBtn {
+    padding: 10px 20px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 500;
+    border: 2px solid cyan;
+    color: cyan;
+    background-color: rgba(0,0,0,0);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+#downloadBtn:hover {
+    background-color: cyan;
+    color: black;
+}
+
+/* my works */
+.myWorks {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+}
+#myworksTxt {
+    margin-top: 20px;
+    /* width: 100%; */
+    font-size: 70px;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    background-image: linear-gradient(to right, cyan, wheat);
+    background-clip: text;
+    color: transparent;
+    /* background: linear-gradient(to right, #00000000, #00c8c8, wheat, #00000000); */
+}
+.works {
+    margin: 15px;
+    padding: 10px;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+    border-radius: 20px;
+    box-sizing: border-box;
+    /* background: linear-gradient(to left, #00ffff00, #1f1f1fb2, transparent 100%),
+    linear-gradient(to right, #00ffff00, #1f1f1fb2, transparent 100%); */
+    background-color: #1f1f1fb2;
+    transition: all 0.2s ease-in-out;
+}
+.works:hover {
+    width: 98%;
+    border-radius: 20px;
+    color: black;
+    font-weight: 500;
+    background: linear-gradient(to left, #00ffff00, wheat, transparent 100%),
+    linear-gradient(to right, #00ffff00, wheat, transparent 100%);
+    background: linear-gradient(30deg, cyan, wheat, wheat, cyan);
+}
+.works:hover > .workTxt {
+    font-weight: 400;
+}
+.workImg {
+    width: 400px;
+    border-radius: 20px;
+} 
+.workTxt {
+    width: 50vw;
+    font-weight: 300;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #00c8c8, wheat);
+    background-clip: text;
+    color: transparent;
+}
+.works:hover > .workTxt {
+    background: none;
+    color: black;
+}
+
+
+
+/* FOOTER */
+.footer {
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: grey;
+    background-color: rgb(15, 15, 15);
+}
+
+
+
+
+
+/* ANIMATION */
+.hidden {
+    transform: translateX(-500px);
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+}
+.show {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}

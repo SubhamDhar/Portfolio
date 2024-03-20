@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Elegance</title>
+    <link rel="icon" href="/media/android-chrome-192x192.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styleMobile.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <!-- navigation bar -->
+        <div class="navbar">
+            <span id="title">URBAN ELEGANCE</span>
+            <div class="navbarItems">
+                <a class="servicesBtn" href="#">Services</a>
+                <a class="resumeBtn" href="#">Resume</a>
+                <a class="galleryBtn" href="/html/gallery.html">Gallery</a>
+                <a class="contactBtn" href="#">
+                    Contact
+                    <i class="fa-brands fa-whatsapp contacts"  onclick="whatsappClick()"></i>
+                    <i class="fa-brands fa-linkedin contacts" onclick="linkedinClick()"></i>
+                    <i class="fa-regular fa-envelope contacts" onclick="emailClick()"></i>
+                </a>
+            </div>
+        </div>
+        <!-- navigation bar for mobile -->
+        <div class="navbarMobile">
+            <span id="title">URBAN ELEGANCE</span>
+            <div class="hamburgMenu">
+                <div id="menuCrossBtn"><i class="fa-solid fa-xmark"></i></div>
+                <ul>
+                    <li><a href="#">Services</a></li>
+                    <hr>
+                    <li><a href="#">Resume</a></li>
+                    <hr>
+                    <li><a href="/html/gallery.html">Gallery</a></li>
+                    <hr>
+                    <li><a href="#" style="display:flex; align-items:center; justify-content:space-between;">
+                        Contact: 
+                        <i class="fa-brands fa-whatsapp fa-2x" style="width:20%;" onclick="whatsappClick()"></i>
+                        <i class="fa-brands fa-linkedin fa-2x" style="width:20%;" onclick="linkedinClick()"></i>
+                        <i class="fa-regular fa-envelope fa-2x" style="width:20%;" onclick="emailClick()"></i>
+                    </a></li>
+                </ul>
+            </div>
+            <i id="hamburgIcon" class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <!-- about me -->
+        <div class="aboutmeContainer">
+            <div class="aboutMe">
+                <img src="/media/subhamImg.jpg" alt="" id="myImg">
+                <div class="aboutmeTxt">
+                    <div id="myRole">Hi, my name is Subham Dhar<br>and I'm an <b>Interior Designer.</b></div>
+                    <p id="myDesc">
+                        <i>Welcome to the world of interior design, where innovation meets passion! As a
+                        second-year college student with a flair for creativity, I aim to craft spaces that reflect
+                        your style and enhance your lifestyle. Drawing inspiration from contemporary trends and
+                        timeless elegance, let's embark on this journey together to transform your vision into
+                        reality, one design at a time.</i>
+                    </p>
+                    <button id="downloadBtn">Download Resume</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="myWorks">
+            <div id="myworksTxt">Some of my works</div>
+            <div class="works hidden">
+                <img src="/media/workImg.jpg" alt="" class="workImg" onclick="openImage('/media/workImg.jpg')">
+                <div class="workTxt">
+                    A 4BHK RCP (Reflected Ceiling Plan) depicts the ceiling layout of a four-bedroom residential space, showing lighting fixtures, vents, and other elements. It offers a bird's-eye view of the room's structural details, facilitating accurate installation and design considerations.
+                </div>
+            </div>
+            <div class="works hidden">
+                <img src="/media/workImg2.jpg" alt="" class="workImg" onclick="openImage('/media/workImg2.jpg')">
+                <div class="workTxt">
+                    A 2BHK AutoCAD design portrays a two-bedroom residential layout, incorporating detailed floor plans, elevations, and sections. It optimizes space utilization, furniture arrangement, and structural elements to create functional and aesthetically pleasing living environments.
+                </div>
+            </div>
+            <div class="works hidden">
+                <img src="/media/workImg1.jpg" alt="" class="workImg" onclick="openImage('/media/workImg1.jpg')">
+                <div class="workTxt">
+                    A compact 3BHK floor plan efficiently utilizes space to accommodate three bedrooms, a living area, kitchen, and possibly a dining area within a smaller footprint. Smart design maximizes functionality without sacrificing comfort, ensuring a cozy and practical living environment.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <span>Email: subhamdhar2150@gmail.com</span>
+            <span>Contact: +91-9836889526</span>
+        </div>
+    </footer>
+
+    <script src="/javascript/script.js"></script>
+    <script src="/javascript/mobile.js"></script>
+    <script src="/javascript/contact.js"></script>
+</body>
+
+</html>

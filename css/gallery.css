@@ -1,0 +1,210 @@
+* {
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    box-sizing: border-box;
+}
+*::selection {
+    color: black;
+    background-color: wheat;
+}
+body {
+    background: linear-gradient(black, rgb(100,100,100), rgb(100, 100, 100), rgb(100,100,100), black);
+    /* background-image: url('/media/bgImage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; */
+}
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+
+
+/* HEADER */
+/* HEADER */
+.navbarMobile {
+    display: none;
+}
+.navbar {
+    z-index: 1;
+    padding: 0 40px;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    font-size: 30px;
+    color: wheat;
+    background-color: #da7b9300;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.0));
+}
+#title {
+    font-size: 50px;
+    font-weight: 200;
+}
+.navbarItems {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbarItems a{
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+.navbarItems a:hover {
+    background: rgb(0, 255, 255);
+    color: black;
+}
+.hamburgMenu {
+    display: none;
+}
+
+
+
+
+/* MAIN */
+#titleContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pageTitle {
+    margin-top: 100px;
+    width: fit-content;
+    font-size: 70px;
+    font-weight: 800;
+    text-align: center;
+    background-image: linear-gradient(to right, cyan, wheat);
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 20px black);
+}
+/* carousel */
+.galleryContainer {
+    margin: 20px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gallery {
+    padding: 30px;
+    gap: -400px;
+    top: 50%;
+    left: 50%;
+    width: 96%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background: url('/media/bgImage.1.png');
+    background-position: center;
+    box-shadow: 0 0px 40px black;
+}
+.carousel {
+    position: relative;
+    margin: 0;
+    padding: 40px 0;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    list-style-type: none;
+    scroll-snap-type: x mandatory;
+}
+.carousel::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.carousel img {
+    position: relative;
+    margin: 0 40px;
+    aspect-ratio: 2.2/1;
+    height: 32vh;
+    border-radius: 25px;
+    scroll-snap-align: center;
+    transition: all 0.2s ease-in-out;
+}
+.carousel img::before {
+    z-index: 99;
+    content: 'hello';
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+}
+.carousel img:hover {
+    box-shadow: 0 0 20px wheat;
+}
+.galleryAbout {
+    margin: 10px;
+    height: fit-content;
+    width: 50%; 
+}
+#galleryaboutTitle {
+    font-size: 25px;
+    font-weight: 300;
+    color: wheat;
+    text-align: center;
+}
+.galleryAbout p{
+    font-size: 25px;
+    font-weight: 200;
+    text-align: center;
+    line-height: 36px;
+    font-weight: 200;
+    /* background: linear-gradient(to right, cyan, wheat); */
+    background-clip: text;
+    color: transparent;
+    color: white;
+    transition: all 0.4s ease-in-out;
+}
+.prevBtn, .nextBtn {
+    width: 70px;
+    height: 400px;
+    color: wheat;
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+
+
+
+/* FOOTER */
+.footer {
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: grey;
+    background-color: rgb(15, 15, 15);
+}
+
+
+
+.hidden {
+    display: none;
+    transition: all 0.4s ease-in-out;
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            transition: all 0.2s ease-in-out;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: grey;
+            display: flex;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            margin: 10px;
+            height: fit-content;
+            width: fit-content;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.2s ease-in-out;
+            isolation: isolate;
+        }
+
+        .card i {
+            display: none;
+        }
+
+        .card img {
+            height: 300px;
+            border-radius: inherit;
+            overflow: hidden;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .card::before {
+            z-index: 1;
+            content: '';
+            opacity: 0;
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0);
+            border: 3px solid white;
+            border-radius: inherit;
+            transition: all 0.2s ease-in-out;
+        }
+
+        #text {
+            z-index: 1;
+            opacity: 0;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 16px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .card:hover img {
+            filter: brightness(0.5);
+            scale: 1.1;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+            inset: 20px;
+        }
+
+        .card:hover #text {
+            opacity: 1;
+        }
+
+        .cardSelected {
+            z-index: 2;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: fit-content;
+            width: 90%;
+            height: 80%;
+            margin: 20px;
+            padding: 20px;
+            position: absolute;
+            top: 2%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50px;
+            overflow: hidden;
+            /* backdrop-filter: blur(8px); */
+            background-color: rgba(0, 0, 0, 0.95);
+            gap: 20px;
+            /* display: none; */
+        }
+
+        .cardSelected img {
+            width: 60%;
+            border-radius: inherit;
+        }
+
+        .cardSelected #text {
+            z-index: 1;
+            opacity: initial;
+            position: initial;
+            top: initial;
+            left: initial;
+            transform: initial;
+            color: white;
+            font-size: 30px;
+            transition: all 0.2s linear;
+        }
+
+        .cardSelected i {
+            display: block;
+            color: white;
+            right: -90px;
+            scale: 2;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1485903266100-192c2e0af64f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="">
+            <div id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus cum corrupti
+                quidem aperiam ea magni, dolor quasi eveniet adipisci. Repellendus fugiat ab architecto, porro sunt
+                excepturi ut accusantium magnam?</div>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="card">
+            <img src="https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-preview.jpg"
+                alt="">
+            <div id="text">HAHAHAHA</div>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="card">
+            <img src="https://c4.wallpaperflare.com/wallpaper/531/951/621/digital-digital-art-artwork-illustration-minimalism-hd-wallpaper-preview.jpg"
+                alt="">
+            <div id="text">HAHAHAHA</div>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="card">
+            <img src="https://c4.wallpaperflare.com/wallpaper/980/85/258/digital-digital-art-artwork-illustration-minimalism-hd-wallpaper-preview.jpg"
+                alt="">
+            <div id="text">HAHAHAHA</div>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="card">
+            <img src="https://c4.wallpaperflare.com/wallpaper/147/871/818/digital-digital-art-artwork-illustration-drawing-hd-wallpaper-preview.jpg"
+                alt="">
+            <div id="text">HAHAHAHA</div>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="card">
+            <img src="https://c4.wallpaperflare.com/wallpaper/741/22/369/digital-digital-art-artwork-fantasy-art-landscape-hd-wallpaper-preview.jpg"
+                alt="">
+            <div id="text">HAHAHAHA</div>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="card">
+            <img src="https://c4.wallpaperflare.com/wallpaper/533/163/784/digital-digital-art-artwork-illustration-minimalism-hd-wallpaper-preview.jpg"
+                alt="">
+            <div id="text">HAHAHAHA</div>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="card">
+            <img src="https://c4.wallpaperflare.com/wallpaper/184/515/626/digital-digital-art-artwork-illustration-drawing-hd-wallpaper-preview.jpg"
+                alt="">
+            <div id="text">HAHAHAHA</div>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="card">
+            <img src="https://c4.wallpaperflare.com/wallpaper/452/228/34/digital-digital-art-artwork-vector-art-vector-graphics-hd-wallpaper-preview.jpg"
+                alt="">
+            <div id="text">HAHAHAHA</div>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
+
+    <script>
+        let cards = document.querySelectorAll('.card');
+        let crossIcons = document.querySelectorAll('.fa-xmark');
+
+        //opening cards on card
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.remove('card');
+                card.classList.add('cardSelected');
+                console.log('card pressed');
+            });
+        });
+        //closing selected cards on cancel click
+        crossIcons.forEach(crossIcon => {
+            crossIcon.addEventListener('click', () => {
+                event.stopPropagation();
+                let cardSelected = document.querySelector('.cardSelected');
+                cardSelected.classList.remove('cardSelected');
+                cardSelected.classList.add('card');
+                console.log('btn pressed');
+            });
+        });
+        
+        //alternate :
+        /*document.querySelector('.gallery').addEventListener('click', (event) => {
+            if (event.target.classList.contains('.card')) {
+                event.target.classList.remove('card');
+                event.target.classList.add('cardSelected');
+            }
+            if (event.target.classList.contains('.fa-xmark')) {
+                const cardSelected = document.querySelector('.cardSelected');
+                cardSelected.classList.add('card');
+                cardSelected.classList.remove('cardSelected');
+            }
+        });*/
+
+    </script>
+</body>
+
+</html>

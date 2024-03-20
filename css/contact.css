@@ -1,0 +1,32 @@
+.contactBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.contacts {
+    position: absolute;
+    padding: 20px;
+    margin-top: -150px;
+    border-radius: 50%;
+    color: wheat;
+    background-color: rgb(29, 29, 29);
+    transition: all 0.2s ease-in-out;
+}
+.contactBtn:hover {
+    height: 600px;
+    background-color: red;
+    border-radius: 60px;
+}
+.contactBtn:hover .contacts:nth-child(1) {
+    margin-top: 150px;
+}
+.contactBtn:hover .contacts:nth-child(2) {
+    margin-top: 320px;
+}
+.contactBtn:hover .contacts:nth-child(3) {
+    margin-top: 490px;
+}
+.contacts:hover {
+    box-shadow: 0 0 15px black;
+}

@@ -1,0 +1,166 @@
+* {
+    font-family: Poppins;
+    z-index: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+}
+body::-webkit-scrollbar{
+    width: 0;
+}
+
+@media (max-width:1080px) {
+    /* HEADER */
+    .navbar {
+        display: none;
+    }
+    .navbarMobile {
+        z-index: 1;
+        padding: 0 15px;
+        height: 65px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        font-size: 30px;
+        color: wheat;
+        background-color: rgb(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+    }
+    #title {
+        font-size: 34px;
+    }
+    .navbarItems {
+        display: none;
+    }
+    #hamburgIcon {
+        display: inline;
+    }
+    .hamburgMenu {
+        z-index: 1;
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -80vw;
+        height: 100vh;
+        width: 80vw;
+        padding: 0 15px;
+        color: white;
+        background: none;
+        background-color: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+        transition: all 0.2s ease-in-out;
+    }
+    #menuCrossBtn {
+        width: 100%;
+        padding: 15px 0;
+    }
+    .hamburgMenu ul {
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        list-style-type: none;
+        color: white;
+    }
+    .hamburgMenu ul li {
+        margin: 12px 0;
+    }
+    .hamburgMenu ul a {
+        text-decoration: none;
+        color: white;
+    }
+    .hamburgMenu hr {
+        height: 1px;
+        border-radius: 50%;
+    }
+
+    
+
+    /* MAIN */
+    /* about me */
+    .aboutMe {
+        margin: 80px 0 40px 0;
+        padding: 0;
+    }
+    #myImg {
+        margin-bottom: 40px;
+        height: 350px;
+        border-radius: 20px;
+    }
+    .aboutmeTxt {
+        width: 92%;
+        gap: 10px;
+    }
+    #myRole {
+        width: 100%;
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+    }
+    #myRole b {
+        font-weight: 600;
+        font-size: 30px;
+    }
+    #myDesc {
+        font-size: 16px;
+        text-align: center;
+    }
+    #downloadBtn {
+        width: 100%;
+    }
+
+    /* my works */
+    .myWorks {
+        padding: 0;
+    }
+    #myworksTxt {
+        padding: 0 5px;
+        font-size: 38px;
+        background: none;
+        color: cyan;
+    }
+    .works, .works:hover {
+        user-select: none;
+        margin: 15px;
+        width: 90%;
+        border-radius: 20px;
+        color: black;
+        background: none;
+        background-color: wheat;
+    }
+    .workImg {
+        width: 100%;
+        border-radius: 20px;
+    } 
+    .workTxt {
+        padding: 12px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 16px;
+        color: black;
+    }
+
+
+
+
+    /* FOOTER */
+    .footer {
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
+
+
+
+
+    /* no fade-in animation for mobile */
+    .hidden {
+        transform: translateX(0);
+        opacity: 1;
+        transition: all 0.1s ease-in-out;
+    }
+}
