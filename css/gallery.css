@@ -113,7 +113,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    background: url('/media/bgImage.1.png');
+    background: url('/Portfolio/media/bgImage.1.png');
     background-position: center;
     box-shadow: 0 0px 40px black;
 }
