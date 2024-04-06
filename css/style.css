@@ -3,15 +3,15 @@
     font-family: Poppins;
     box-sizing: border-box;
 }
+:focus {
+    outline: none;
+}
 *::selection {
     color: black;
     background-color: wheat;
 }
 body {
-    background: url('/Portfolio/media/bgImg2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: black;
 }
 body::-webkit-scrollbar {
     width: 0;
@@ -79,7 +79,7 @@ body::-webkit-scrollbar {
 .aboutMe {
     height: fit-content;
     width: 95%;
-    margin: 110px 0 0 0;
+    margin: 110px 0 12px 0;
     padding: 40px;  
     display: flex;
     flex-wrap: wrap;
@@ -133,20 +133,104 @@ body::-webkit-scrollbar {
     color: black;
 }
 
+/* my skills */
+.mySkills {
+    margin: 50px 0 70px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.skills {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+.skill {
+    margin: 6px 8px;
+    padding: 8px 20px;
+    width: fit-content;
+    font-size: 24px;
+    border-radius: 12px;
+    color: black;
+    background-color: cyan;
+}
+
+/* my education */
+.myEducation {
+    margin: 50px 0;
+    padding: 40px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: grey; */
+    background: linear-gradient(to right, wheat, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000, #00000000,  wheat);
+    box-sizing: border-box;
+}
+.eduWrapper {
+    margin-top: 20px;
+    width: 60%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.eduProgress {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.circle {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: wheat;
+}
+.line {
+    height: 200px;
+    width: 3px;
+    background-color: wheat;
+}
+.eduInfo {
+    margin-left: 30px;
+}
+.point {
+    font-size: 20px;
+    font-weight: 200;
+}
+.point.one, .point.two {
+    margin-bottom: 100px;
+}
+.eduInfo b {
+    font-size: 30px;
+    font-weight: 400;
+}
+.fa-calendar-days {
+    margin-right: 10px;
+}
+
 /* my works */
 .myWorks {
     width: 100%;
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: black;
+    /* background-color: black; */
 }
-#myworksTxt {
+.myworksTitle {
+    width: 100%;
+}
+.title {
     margin-top: 20px;
-    /* width: 100%; */
     font-size: 70px;
     font-weight: 400;
     text-align: center;
@@ -159,39 +243,35 @@ body::-webkit-scrollbar {
 .works {
     margin: 15px;
     padding: 10px;
-    width: 95%;
+    width: 30%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     height: fit-content;
     border-radius: 20px;
     box-sizing: border-box;
-    /* background: linear-gradient(to left, #00ffff00, #1f1f1fb2, transparent 100%),
-    linear-gradient(to right, #00ffff00, #1f1f1fb2, transparent 100%); */
-    background-color: #1f1f1fb2;
+    background-color: #1f1f1f00;
     transition: all 0.2s ease-in-out;
 }
 .works:hover {
-    width: 98%;
+    /* width: 98%; */
     border-radius: 20px;
     color: black;
     font-weight: 500;
-    background: linear-gradient(to left, #00ffff00, wheat, transparent 100%),
-    linear-gradient(to right, #00ffff00, wheat, transparent 100%);
-    background: linear-gradient(30deg, cyan, wheat, wheat, cyan);
-}
-.works:hover > .workTxt {
-    font-weight: 400;
+    background: linear-gradient(30deg, cyan, wheat, wheat);
+    background-color: wheat;
 }
 .workImg {
-    width: 400px;
+    width: 95%;
     border-radius: 20px;
 } 
 .workTxt {
-    width: 50vw;
-    font-weight: 300;
-    font-size: 25px;
+    margin-top: 15px;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
     background-image: linear-gradient(to right, #00c8c8, wheat);
     background-clip: text;
     color: transparent;
@@ -205,6 +285,7 @@ body::-webkit-scrollbar {
 
 /* FOOTER */
 .footer {
+    margin-top: 100px;
     height: 120px;
     display: flex;
     justify-content: space-around;
