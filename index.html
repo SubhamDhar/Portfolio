@@ -24,9 +24,9 @@
         <div class="navbar">
             <span id="title">URBAN ELEGANCE</span>
             <div class="navbarItems">
-                <a class="servicesBtn" href="#">Services</a>
-                <a class="resumeBtn" href="#">Resume</a>
                 <a class="galleryBtn" href="/Portfolio/html/gallery.html">Gallery</a>
+                <a class="resumeBtn" href="#">Resume</a>
+                <a class="servicesBtn" href="#">Services</a>
                 <a class="contactBtn" href="#">
                     Contact
                     <i class="fa-brands fa-whatsapp contacts"  onclick="whatsappClick()"></i>
@@ -41,11 +41,11 @@
             <div class="hamburgMenu">
                 <div id="menuCrossBtn"><i class="fa-solid fa-xmark"></i></div>
                 <ul>
-                    <li><a href="#">Services</a></li>
+                    <li><a href="/Portfolio/html/gallery.html">Gallery</a></li>
                     <hr>
                     <li><a href="#">Resume</a></li>
                     <hr>
-                    <li><a href="/Portfolio/html/gallery.html">Gallery</a></li>
+                    <li><a href="#">Services</a></li>
                     <hr>
                     <li><a href="#" style="display:flex; align-items:center; justify-content:space-between;">
                         Contact: 
@@ -73,27 +73,72 @@
                         timeless elegance, let's embark on this journey together to transform your vision into
                         reality, one design at a time.</i>
                     </p>
-                    <button id="downloadBtn">Download Resume</button>
+                    <button id="downloadBtn">Download CV <i class="fa-solid fa-download"></i></button>
                 </div>
             </div>
         </div>
 
+        <!-- my skills -->
+        <div class="mySkills">
+            <div class="title myskillsTitle">Skillset</div>
+            <div class="skills">
+                <div class="skill">Designing</div>
+                <div class="skill">3D Modelling</div>
+                <div class="skill">3D Rendering</div>
+                <div class="skill">Video Editing</div>
+                <div class="skill">Photography</div>
+                <div class="skill">Photoshop</div>
+            </div>
+        </div>
+
+        <!-- my education -->
+        <div class="myEducation">
+            <div class="title educationTitle" style="margin:0 0 20px 0;">Education</div>
+            <div class="eduWrapper">
+                <div class="eduProgress">
+                    <div class="circle one" style="margin-bottom:-10px;"></div>
+                    <div class="line"></div>
+                    <div class="circle two" style="margin-top:-10px;"></div>
+                    <div class="line"></div>
+                    <div class="circle two" style="margin-top:-10px;"></div>
+                </div>
+                <div class="eduInfo">
+                    <div class="point one hidden">
+                        <b>Amity University, Kolkata</b>
+                        <br>Pursuing Bachelor's Degree in Interior Design.<br>
+                        <i class="fa-regular fa-calendar-days"></i>2022 - 2026
+                    </div>
+                    <div class="point two hidden">
+                        <b>EduClinic</b>
+                        <br>Studied commerce as a foundation for future pursuits, aiming to leverage skills and knowledge.<br>
+                        <i class="fa-regular fa-calendar-days"></i>2020 - 2022
+                    </div>
+                    <div class="point three hidden">
+                        <b>Bharatiya Vidya Bhavan</b>
+                        <br>Completed Higher-Secondary with Commerce as my major.<br>
+                        <i class="fa-regular fa-calendar-days"></i>2008 - 2022
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- some of my works -->
         <div class="myWorks">
-            <div id="myworksTxt">Some of my works</div>
+            <div class="title myworksTitle">Some of my works</div>
             <div class="works hidden">
-                <img src="/Portfolio/media/workImg.jpg" alt="" class="workImg" onclick="openImage('/Portfolio/media/workImg.jpg')">
+                <img src="/Portfolio/media/workImg.jpg" alt="" class="workImg" onclick="openImage('/media/workImg.jpg')">
                 <div class="workTxt">
                     A 4BHK RCP (Reflected Ceiling Plan) depicts the ceiling layout of a four-bedroom residential space, showing lighting fixtures, vents, and other elements. It offers a bird's-eye view of the room's structural details, facilitating accurate installation and design considerations.
                 </div>
             </div>
             <div class="works hidden">
-                <img src="/Portfolio/media/workImg2.jpg" alt="" class="workImg" onclick="openImage('/Portfolio/media/workImg2.jpg')">
+                <img src="/Portfolio/media/workImg2.jpg" alt="" class="workImg" onclick="openImage('/media/workImg2.jpg')">
                 <div class="workTxt">
                     A 2BHK AutoCAD design portrays a two-bedroom residential layout, incorporating detailed floor plans, elevations, and sections. It optimizes space utilization, furniture arrangement, and structural elements to create functional and aesthetically pleasing living environments.
                 </div>
             </div>
             <div class="works hidden">
-                <img src="/Portfolio/media/workImg1.jpg" alt="" class="workImg" onclick="openImage('/Portfolio/media/workImg1.jpg')">
+                <img src="/Portfolio/media/workImg1.jpg" alt="" class="workImg" onclick="openImage('/media/workImg1.jpg')">
                 <div class="workTxt">
                     A compact 3BHK floor plan efficiently utilizes space to accommodate three bedrooms, a living area, kitchen, and possibly a dining area within a smaller footprint. Smart design maximizes functionality without sacrificing comfort, ensuring a cozy and practical living environment.
                 </div>
